@@ -91,7 +91,8 @@ namespace AddressScrub
                 var result = resp.Content.ReadAsStringAsync().Result;
                 dynamic obj = JsonConvert.DeserializeObject(result);
                 if (obj.errors != null) return;
-                UpdateSql(obj, input.Id);
+                //uncomment the line below to update your sql db
+                //UpdateSql(obj, input.Id);
             }
         }
 
